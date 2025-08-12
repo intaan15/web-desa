@@ -23,63 +23,63 @@ import logo from '../images/logo.png';
 import bagan from '../images/bagan.png'; 
 
 // foto perangakat
-import beni from '../images/logo.png';
+import kades from '../images/perdesa/zaeni.png';
 
 const perangkatDesa = [
   {
-    nama: "Beni1",
+    nama: "Zaeni",
     jabatan: "Kepala Desa",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "Dita2",
     jabatan: "Chief Operating Officer",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "intaan3",
     jabatan: "Chief Financial Officer",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "adadeh4",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test5",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test6",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test7",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test8",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test9",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test10",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
   {
     nama: "test11",
     jabatan: "Senior Business Consultant",
-    foto: beni,
+    foto: kades,
   },
 ];
 
@@ -329,7 +329,7 @@ function Profil() {
             <a href="" ><FaTiktok size={30} /></a>
         </div>
         <footer className="text-black text-center border-t border-black py-4 text-sm">
-            &copy; {new Date().getFullYear()} 2025 KKN Desa Tegal Ciut.
+            &copy; 2025 KKN Desa Tegal Ciut.
         </footer>
 
     </div>

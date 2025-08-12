@@ -122,7 +122,7 @@ function Dashboard() {
         </div>
         
         {/* logo tegal ciut */}
-        <div className='flex flex-col md:flex-row items-center justify-center gap-7 px-4'>
+        <div className='flex flex-col md:flex-row items-center justify-center gap-7 md:gap-3 px-4'>
           <img src={kkn} alt="" className='w-[220px] md:w-[300px] object-contain'/>
           <div className='w-full md:w-[50%] flex flex-col items-center text-center gap-3'>
             <p className='text-xl sm:text-2xl md:text-[25px] font-bold font-raleway'>Sambutan Kepala Desa Tegal Ciut</p>
@@ -131,6 +131,23 @@ function Dashboard() {
               Driving innovation and digital transformation to help tech companies scale and thrive in a competitive landscape.
             </p>
           </div>
+        </div>
+
+        {/* video profil desa */}
+        <div className='flex flex-col md:flex-row items-center px-9 md:px-9 gap-6'>
+          <h2 className='text-2xl md:text-3xl font-bold text-center md:text-left w-full md:w-1/2 pt-5 md:pt-0'>VIDEO PROFIL DESA</h2>
+          <a
+            href="https://youtu.be/4UmDdjw9EpE?si=MfKL-GTPK-tw1sFA"
+            target="_blank"
+            rel=""
+            className="w-3/4 md:w-1/2"
+          >
+            <img
+              src="https://img.youtube.com/vi/4UmDdjw9EpE/hqdefault.jpg"
+              alt="Thumbnail YouTube"
+              className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300"
+            />
+          </a>
         </div>
 
         {/* galeri desa */}
@@ -199,7 +216,7 @@ function Dashboard() {
         </div>
 
         <footer className="text-black text-center border-t border-black py-4 text-sm">
-          &copy; {new Date().getFullYear()} 2025 KKN Desa Tegal Ciut.
+          &copy; 2025 KKN Desa Tegal Ciut.
         </footer>
     </div>
   )
