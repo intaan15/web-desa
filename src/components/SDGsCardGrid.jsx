@@ -46,7 +46,7 @@ export default function SDGsCardGrid() {
       {data.map((item) => (
         <div
           key={item.id}
-          className="flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-2 border"
+          className="flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-2 border" data-aos="zoom-in" data-aos-delay="400"
         >
             <div className='flex flex-col items-start w-full h-full px-2'>
                 <h2 className="text-sm font-semibold mb-1 text-center ">{item.title}</h2>

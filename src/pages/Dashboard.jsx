@@ -22,12 +22,30 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 import img1 from '../images/img1.jpg';
 import img2 from '../images/img2.jpg';
 import img3 from '../images/img3.jpg';
+import img4 from '../images/img4.jpg';
+import img5 from '../images/img5.jpg';
+import sambut from '../images/sambutan.png';
+
+
 
 function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, 
+    once: false,    
+    offset: 100,    
+  });
+}, []);
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-100 to-gray-200'>
         {/* header */}
@@ -71,7 +89,7 @@ function Dashboard() {
             </nav>
         </header>
         {/* selamat datang atas */}
-        <div className="w-full bg-white">
+        <div className="w-full bg-white" data-aos="zoom-in">
         {/* Container gambar 75% */}
           <div className="relative w-full h-[50vh]">
             {/* Gambar full cover */}
@@ -98,23 +116,23 @@ function Dashboard() {
 
         {/* jelajahi desa */}
         <div className='flex flex-col items-center text-center'>
-          <div className='flex flex-col items-center justify-center px-4 py-8'>
+          <div className='flex flex-col items-center justify-center px-4 py-8' data-aos="zoom-in" data-aos-delay="400">
             <p className='text-[22px] sm:text-[25px] font-bold font-raleway text-center text-[#237274]'>Jelajahi Desa</p>
             <p className='mt-2 text-[14px] sm:text-[15px] font-medium font-raleway text-center w-full max-w-4xl'>Jelajahi semua hal terkait dengan Desa Tegal Ciut, Kecamatan Klakah, Kabupaten Lumajang. Jelajahi mulai dari Aspek pemerintahan, penduduk, demografi, UMKM desa dan galeri desa.</p>
           </div>
           <div className='flex w-[90%] justify-around gap-10 py-6 flex-wrap'>
-            <div className='flex flex-col w-full md:w-[45%] items-center text-center gap-2'>
+            <div className='flex flex-col w-full md:w-[45%] items-center text-center gap-2' data-aos="zoom-in" data-aos-delay="400">
               <IoIosHome size={48} color="#46B5B6" />
               <p className='font-bold text-[#237274]'>Profil Desa</p>
               <p className='text-sm'>Driving innovation and digital transformation to help tech companies scale and thrive in a competitive landscape.</p>
             </div>
-            <div className='flex flex-col w-full md:w-[45%] items-center text-center gap-2'>
+            <div className='flex flex-col w-full md:w-[45%] items-center text-center gap-2' data-aos="zoom-in" data-aos-delay="400">
               <FaChartBar size={48} color="#46B5B6" />
               <p className='font-bold text-[#237274]'>Infografis</p>
               <p className='text-sm'>Enhancing profitability and managing financial risks with expert advisory tailored for the financial sector.</p>
             </div>
           </div>
-          <div className='flex flex-col w-[90%] md:w-[45%] items-center text-center gap-2'>
+          <div className='flex flex-col w-[90%] md:w-[45%] items-center text-center gap-2' data-aos="zoom-in" data-aos-delay="400">
             <FaStore size={48} className='text-center' color="#46B5B6" />
             <p className='font-bold text-[#237274]'>UMKM</p>
             <p className='text-sm'>Enhancing profitability and managing financial risks with expert advisory tailored for the financial sector.</p>
@@ -122,36 +140,43 @@ function Dashboard() {
         </div>
         
         {/* logo tegal ciut */}
-        <div className='flex flex-col md:flex-row items-center justify-center gap-7 md:gap-3 px-4'>
-          <img src={kkn} alt="" className='w-[220px] md:w-[300px] object-contain'/>
-          <div className='w-full md:w-[50%] flex flex-col items-center text-center gap-3'>
+        <div className='flex flex-col md:flex-row items-center justify-center gap-3 md:gap-9 px-4 pt-6'>
+          <img src={sambut} alt="" className='w-[200px] md:w-[300px] object-contain'data-aos="zoom-in" data-aos-delay="400"/>
+          <div className='w-full md:w-[50%] flex flex-col items-center text-center gap-3' data-aos="zoom-in" data-aos-delay="400">
             <p className='text-xl sm:text-2xl md:text-[25px] font-bold font-raleway'>Sambutan Kepala Desa Tegal Ciut</p>
-            <p className='text-sm md:text-base font-nunito'>Their strategic insights helped us streamline our operations and increase profitability by 25% within a year. We couldn’t have achieved such success without their expert guidance.
-              Driving innovation and digital transformation to help tech companies scale and thrive in a competitive landscape.
-              Driving innovation and digital transformation to help tech companies scale and thrive in a competitive landscape.
+            <p className='text-sm md:text-base font-nunito text-justify'>
+              Assalamu’alaikum warahmatullahi wabarakatuh,Selamat datang di website resmi Desa Tegal Ciut. 
+              Website ini hadir sebagai sarana informasi, transparansi, dan komunikasi antara pemerintah 
+              desa dengan masyarakat, sekaligus sebagai media promosi potensi desa.Tahun 2025 ini, kami 
+              berbangga mendapat dukungan dari program KKN Kolaboratif Universitas Jember (UNEJ) dan UIN 
+              Khas Jember, yang turut berperan dalam pemberdayaan masyarakat serta pengembangan program 
+              kerja di desa kami. Semoga kerjasama ini membawa manfaat besar bagi kemajuan Desa Tegal Ciut 
+              dan kesejahteraan warganya.Wassalamu’alaikum warahmatullahi wabarakatuh.
             </p>
+            <p>- Zaeni, Kepala Desa Tegal Ciut 2025 -</p>
           </div>
         </div>
 
         {/* video profil desa */}
         <div className='flex flex-col md:flex-row items-center px-9 md:px-9 gap-6'>
-          <h2 className='text-2xl md:text-3xl font-bold text-center md:text-left w-full md:w-1/2 pt-5 md:pt-0'>VIDEO PROFIL DESA</h2>
+          <h2 className='text-2xl md:text-3xl font-bold text-center md:text-left w-full md:w-1/2 pt-5 md:pt-0' data-aos="zoom-in" data-aos-delay="400">Video Profil Desa</h2>
           <a
-            href="https://youtu.be/4UmDdjw9EpE?si=MfKL-GTPK-tw1sFA"
+            href="https://youtu.be/lT2X-1EYV-U"
             target="_blank"
             rel=""
             className="w-3/4 md:w-1/2"
-          >
+          > 
             <img
-              src="https://img.youtube.com/vi/4UmDdjw9EpE/hqdefault.jpg"
+              src="https://img.youtube.com/vi/lT2X-1EYV-U/hqdefault.jpg"
               alt="Thumbnail YouTube"
               className="w-full h-auto rounded-lg hover:opacity-80 transition duration-300"
+              data-aos="zoom-in" data-aos-delay="400"
             />
           </a>
         </div>
 
         {/* galeri desa */}
-        <div className='pt-5'>
+        <div className='pt-5' data-aos="zoom-in" data-aos-delay="400">
           <p className='text-[22px] sm:text-[25px] font-bold font-raleway text-center pb-9'>Galeri Desa</p>
           <Swiper
             modules={[Navigation]}
@@ -169,6 +194,12 @@ function Dashboard() {
             </SwiperSlide>
             <SwiperSlide>
               <img src={img3} alt="Slide 3" className="w-full h-full object-cover" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img4} alt="Slide 4" className="w-full h-full object-cover" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img5} alt="Slide 5" className="w-full h-full object-cover" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -197,11 +228,11 @@ function Dashboard() {
               <p className="text-[15px] font-bold font-raleway">Hubungi Kami</p>
               <div className="flex items-center gap-2">
                 <IoCallOutline size={20} />
-                <p>0138414091</p>
+                <p>+62 853-3020-9635</p>
               </div>
               <div className="flex items-center gap-2">
                 <CiMail size={20} />
-                <p>contoh@email.com</p>
+                <p>desategalciutklakah@gmail.com</p>
               </div>
             </div>
           </div>
@@ -209,10 +240,8 @@ function Dashboard() {
 
         {/* sosmed */}
         <div className='flex justify-end px-9 py-5 gap-3'>
-          <a href="" ><FaFacebook size={30} /></a>
-          <a href="" ><FaSquareInstagram size={30} /></a>
-          <a href="" ><FaYoutube size={30} /></a>
-          <a href="" ><FaTiktok size={30} /></a>
+          <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank"><FaFacebook size={30} /></a>
+          <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" ><FaSquareInstagram size={30} /></a>
         </div>
 
         <footer className="text-black text-center border-t border-black py-4 text-sm">

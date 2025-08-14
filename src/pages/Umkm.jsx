@@ -20,10 +20,21 @@ import besi from '../images/besisano.jpg';
 import kue from '../images/kuekripik.jpg'; 
 import puli from '../images/puli.jpg'; 
 
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function Umkm() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, 
+    once: false,    
+    offset: 100,    
+  });
+}, []);
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-100 to-gray-200'>
         {/* header */}
@@ -69,14 +80,14 @@ function Umkm() {
 
         {/* isi tengah */}
         <div className='flex flex-col justify-center items-center px-4 py-8'>
-            <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway px-4 py-2 rounded'>INFORMASI  UMKM DESA TEGAL CIUT</h2>
+            <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway px-4 py-2 rounded' data-aos="zoom-in" >INFORMASI  UMKM DESA TEGAL CIUT</h2>
             <section className="my-4 px-6 md:px-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-aos="zoom-in" data-aos-delay="400">
                     Pandai Besi Pak Sano
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Bagian Kiri - Deskripsi dan Gambar */}
-                    <div>
+                    <div data-aos="zoom-in" data-aos-delay="400">
                         <p className="text-gray-700 mb-4 text-justify">
                             UMKM Pandai Besi Tegal Ciut, yang dimiliki oleh Bapak Sano, telah berdiri ratusan tahun 
                             dan berfokus pada produksi senjata tajam tradisional seperti golok, clurit, dan pisau dapur. 
@@ -87,7 +98,7 @@ function Umkm() {
                     </div>
 
                     {/* Bagian Kanan - Detail Informasi */}
-                    <div className="text-sm text-gray-800 space-y-4">
+                    <div className="text-sm text-gray-800 space-y-4" data-aos="zoom-in" data-aos-delay="400">
                     <div>
                         <h3 className="font-semibold">Hasil Produk UMKM</h3>
                         <p>Keripik singkong, keripik pisang, keripik tempe berbagai rasa (pedas, manis, original).</p>
@@ -122,12 +133,12 @@ function Umkm() {
                 </div>
             </section>
             <section className='flex flex-col w-full my-4 px-6 md:px-12 items-end'>
-                <h2 className='flex text-2xl md:text-3xl font-bold text-right mb-4'>
+                <h2 className='flex text-2xl md:text-3xl font-bold text-right mb-4' data-aos="zoom-in" data-aos-delay="400">
                     Toko Aneka Kue dan Snack Bu Supiana
                 </h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                     {/* Bagian Kiri - Detail Informasi */}
-                    <div className="text-sm text-gray-800 space-y-4 ">
+                    <div className="text-sm text-gray-800 space-y-4" data-aos="zoom-in" data-aos-delay="400">
                     <div>
                         <h3 className="font-semibold">Hasil Produk UMKM</h3>
                         <p>Kue basah seperti jenis kue-kue pasar, kue tar, kue kering, keripik pisang, keripik puhung, keripik mbote dan berbagai snack lainnya</p>
@@ -164,7 +175,7 @@ function Umkm() {
                     </div>
 
                     {/* Bagian Kanan - Deskripsi dan Gambar */}
-                    <div>
+                    <div data-aos="zoom-in" data-aos-delay="400">
                         <p className="text-gray-700 mb-4 text-justify">
                             UMKM milik Ibu Supiana ini bergerak di bidang produksi aneka kue rumahan dan camilan tradisional 
                             khas daerah. Produk yang ditawarkan meliputi kue basah, kue tar, kue kering, keripik pisang, 
@@ -175,12 +186,12 @@ function Umkm() {
                 </div>
             </section>
             <section className="my-4 px-6 md:px-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-aos="zoom-in" data-aos-delay="400">
                     Rumah Kerupuk Puli Lezar Bu Mistia
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Bagian Kiri - Deskripsi dan Gambar */}
-                    <div>
+                    <div data-aos="zoom-in" data-aos-delay="400">
                         <p className="text-gray-700 mb-4 text-justify">
                             Rumah Kerupuk Puli Lezar Bu Mistia adalah UMKM rumahan di Desa Tegal Ciut yang berdiri 
                             sejak tahun 2020. Usaha ini dikelola sendiri oleh Ibu Mistia dan memproduksi kerupuk 
@@ -192,7 +203,7 @@ function Umkm() {
                     </div>
 
                     {/* Bagian Kanan - Detail Informasi */}
-                    <div className="text-sm text-gray-800 space-y-4">
+                    <div className="text-sm text-gray-800 space-y-4" data-aos="zoom-in" data-aos-delay="400">
                     <div>
                         <h3 className="font-semibold">Hasil Produk UMKM</h3>
                         <p>Kerupuk puli (rambak)</p>
@@ -246,10 +257,10 @@ function Umkm() {
             <div className="w-full md:w-[38%] flex flex-col items-center md:items-start">
                 <p className="text-[15px] font-bold font-raleway mb-2">Pemerintah Desa Tegal Ciut</p>
                 <div className="flex items-start gap-2">
-                <CiLocationOn size={24} />
-                <p className="max-w-xs">
-                    Jalan Gunung Ringgit No. 64, Desa Tegal Ciut, Kecamatan Klakah, Kabupaten Lumajang
-                </p>
+                    <CiLocationOn size={24} />
+                    <p className="max-w-xs">
+                        Jalan Gunung Ringgit No. 64, Desa Tegal Ciut, Kecamatan Klakah, Kabupaten Lumajang
+                    </p>
                 </div>
             </div>
 
@@ -258,11 +269,11 @@ function Umkm() {
                 <p className="text-[15px] font-bold font-raleway">Hubungi Kami</p>
                 <div className="flex items-center gap-2">
                 <IoCallOutline size={20} />
-                <p>0138414091</p>
+                <p>+62 853-3020-9635</p>
                 </div>
                 <div className="flex items-center gap-2">
                 <CiMail size={20} />
-                <p>contoh@email.com</p>
+                <p>desategalciutklakah@gmail.com</p>
                 </div>
             </div>
             </div>
@@ -270,11 +281,10 @@ function Umkm() {
 
         {/* sosmed */}
         <div className='flex justify-end px-9 py-5 gap-3'>
-            <a href="" ><FaFacebook size={30} /></a>
-            <a href="" ><FaSquareInstagram size={30} /></a>
-            <a href="" ><FaYoutube size={30} /></a>
-            <a href="" ><FaTiktok size={30} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank"><FaFacebook size={30} /></a>
+            <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" ><FaSquareInstagram size={30} /></a>
         </div>
+
         <footer className="text-black text-center border-t border-black py-4 text-sm">
             &copy; 2025 KKN Desa Tegal Ciut.
         </footer>

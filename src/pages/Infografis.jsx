@@ -20,9 +20,13 @@ import { BsPeopleFill } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 
 import desa from '../images/bgdesa.jpg'; 
-import kkn from '../images/logokkn.png'; 
+import sdgs from '../images/sdgs.jpg'; 
 import logo from '../images/logo.png'; 
 import kue from '../images/kuekripik.jpg'; 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 // conponents
 import Diagrampenduduk from '../components/Diagrampenduduk';
@@ -36,6 +40,15 @@ import Cardagama from '../components/CardAgama';
 function Infografis() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('demografi');
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, 
+    once: false,    
+    offset: 100,    
+  });
+}, []);
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-100 to-gray-200'>
         {/* header */}
@@ -81,7 +94,7 @@ function Infografis() {
 
         {/* isi tengah */}
         <section className="flex flex-col my-10 px-6 md:px-12 gap-3">
-            <div className='flex justify-between gap-3'>
+            <div className='flex justify-between gap-3' data-aos="zoom-in">
                 <h2 className='text-2xl md:text-3xl font-bold text-slate-800 mb-4 text-left font-raleway'>INFOGRAFIS DESA TEGAL CIUT</h2>
                 <div className="flex space-x-6 justify-center">
                     <button
@@ -110,10 +123,10 @@ function Infografis() {
                 <div>
                     {/* atas */}
                     <div className='flex flex-col md:flex-row gap-6 items-center'>
-                        <div className='w-full md:w-1/2'>
+                        <div className='w-full md:w-1/2' data-aos="zoom-in" data-aos-delay="400">
                             <img src={kue} alt="" className="w-[500px] h-auto object-cover rounded-xl"/>
                         </div>
-                        <div className='w-full md:w-1/2 text-justify'>
+                        <div className='w-full md:w-1/2 text-justify' data-aos="zoom-in" data-aos-delay="400">
                             <h2 className='text-xl md:text-2xl font-bold mb-2 text-slate-800'>DEMOGRAFI DESA TEGAL CIUT</h2>
                             <p className='text-sm md:text-base text-slate-700 leading-relaxed'>
                                 Memberikan informasi lengkap mengenai karakteristik demografi penduduk suatu wilayah. 
@@ -124,82 +137,82 @@ function Infografis() {
                     </div>
                     {/* penduduk */}
                     <div className='flex flex-col gap-5 items-center pt-3 md:pt-9'>
-                        <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Jumlah Penduduk dan Kepadatan Penduduk</h2>
+                        <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway' data-aos="zoom-in" data-aos-delay="400">Jumlah Penduduk dan Kepadatan Penduduk</h2>
                         {/* Grid Data */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {/* Kartu 1 */}
-                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow">
-                            <IoPeople size={56} className="text-blue-500" />
-                            <div>
-                                <p className="text-base font-semibold font-raleway">Total Penduduk</p>
-                                <p className="font-nunito text-lg">4.444 Jiwa</p>
-                            </div>
+                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow" data-aos="zoom-in" data-aos-delay="400">
+                                <IoPeople size={56} className="text-blue-500" />
+                                <div>
+                                    <p className="text-base font-semibold font-raleway">Total Penduduk</p>
+                                    <p className="font-nunito text-lg">4.444 Jiwa</p>
+                                </div>
                             </div>
                             {/* Kartu 2 */}
-                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow">
-                            <FaPeopleRoof size={56} className="text-purple-500" />
-                            <div>
-                                <p className="text-base font-semibold font-raleway">Kepadatan Penduduk</p>
-                                <p className="font-nunito text-lg">643 Jiwa/km²</p>
-                            </div>
+                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow" data-aos="zoom-in" data-aos-delay="400">
+                                <FaPeopleRoof size={56} className="text-purple-500" />
+                                <div>
+                                    <p className="text-base font-semibold font-raleway">Kepadatan Penduduk</p>
+                                    <p className="font-nunito text-lg">643 Jiwa/km²</p>
+                                </div>
                             </div>
 
                             {/* Kartu 3 */}
-                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow">
-                            <IoIosWoman size={56} className="text-pink-500" />
-                            <div>
-                                <p className="text-base font-semibold font-raleway">Perempuan</p>
-                                <p className="font-nunito text-lg">2.309 Jiwa</p>
-                            </div>
+                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow" data-aos="zoom-in" data-aos-delay="400">
+                                <IoIosWoman size={56} className="text-pink-500" />
+                                <div>
+                                    <p className="text-base font-semibold font-raleway">Perempuan</p>
+                                    <p className="font-nunito text-lg">2.309 Jiwa</p>
+                                </div>
                             </div>
 
                             {/* Kartu 4 */}
-                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow">
-                            <IoMdMan size={56} className="text-green-500" />
-                            <div>
-                                <p className="text-base font-semibold font-raleway">Laki - Laki</p>
-                                <p className="font-nunito text-lg">2.135 Jiwa</p>
-                            </div>
+                            <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow" data-aos="zoom-in" data-aos-delay="400">
+                                <IoMdMan size={56} className="text-green-500" />
+                                <div>
+                                    <p className="text-base font-semibold font-raleway">Laki - Laki</p>
+                                    <p className="font-nunito text-lg">2.135 Jiwa</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {/* diagram penduduk */}
-                    <div className='flex flex-col gap-5 pt-7'>
+                    <div className='flex flex-col gap-5 pt-7' data-aos="zoom-in" data-aos-delay="400">
                         <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Berdasarkan kelompok Umur</h2>
                         <div className="flex justify-center items-center">
                             <Diagrampenduduk />
                         </div>
                     </div>
                     {/* diagram dusun */}
-                    <div className='flex flex-col gap-5 pt-7'>
+                    <div className='flex flex-col gap-5 pt-7' data-aos="zoom-in" data-aos-delay="400">
                         <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Berdasarkan Dusun</h2>
                         <div className=" flex justify-center items-center">
                             <Diagramdusun />
                         </div>
                     </div>
                     {/* diagram pendidikan */}
-                    <div className='flex flex-col gap-5 pt-7'>
+                    <div className='flex flex-col gap-5 pt-7' data-aos="zoom-in" data-aos-delay="400">
                         <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Berdasarkan Pendidikan</h2>
                         <div className=" flex justify-center items-center">
                             <Diagrampendidikan />
                         </div>
                     </div>
                     {/* diagram pekerjaan */}
-                    <div className='flex flex-col gap-5 pt-7'>
+                    <div className='flex flex-col gap-5 pt-7' data-aos="zoom-in" data-aos-delay="400">
                         <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Berdasarkan Pekerjaan</h2>
                         <div className=" flex justify-center items-center">
                             <Diagrampekerjaan />
                         </div>
                     </div>
                     {/* diagram perkawinan */}
-                    <div className='flex flex-col gap-5 pt-7'>
+                    <div className='flex flex-col gap-5 pt-7' data-aos="zoom-in" data-aos-delay="400">
                         <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Berdasarkan Perkawinan</h2>
                         <div className=" flex justify-center items-center">
                             <Diagramperkawinan />
                         </div>
                     </div>
                     {/* diagram agama */}
-                    <div className='flex flex-col gap-5 pt-7'>
+                    <div className='flex flex-col gap-5 pt-7' data-aos="zoom-in" data-aos-delay="400">
                         <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway'>Berdasarkan Agama</h2>
                         <div className=" flex justify-center items-center">
                             <Cardagama />
@@ -212,10 +225,10 @@ function Infografis() {
                 <div>
                     {/* atas */}
                     <div className='flex flex-col md:flex-row gap-6 items-center'>
-                        <div className='w-full md:w-1/2'>
-                            <img src={kue} alt="" className="w-[500px] h-auto object-cover rounded-xl"/>
+                        <div className='w-full md:w-1/2' data-aos="zoom-in" data-aos-delay="400">
+                            <img src={sdgs} alt="" className="w-[500px] h-auto object-cover rounded-xl"/>
                         </div>
-                        <div className='w-full md:w-1/2 text-justify'>
+                        <div className='w-full md:w-1/2 text-justify' data-aos="zoom-in" data-aos-delay="400">
                             <h2 className='text-xl md:text-2xl font-bold mb-2 text-slate-800'>SDGs DESA TEGAL CIUT</h2>
                             <p className='text-sm md:text-base text-slate-700 leading-relaxed'>
                                 SDGs Desa mengacu pada upaya yang dilakukan di tingkat Desauntuk mencapai Tujuan Pembangunan 
@@ -227,7 +240,7 @@ function Infografis() {
                     </div>
                     
                     {/* skor */}
-                    <div className='text-center pt-5 md:pt-9 '>
+                    <div className='text-center pt-5 md:pt-9' data-aos="zoom-in" data-aos-delay="400">
                         <div className='inline-block bg-[#F9FCFD] text-[#1B2C42] rounded-2xl shadow-sm px-6 py-3 items-center text-center'>
                             <p className='text-sm md:text-base font-bold'>SKOR SDGs DESA TEGAL CIUT</p>
                             <p className='text-2xl md:text-3xl font-semibold'>34,29</p>
@@ -235,7 +248,7 @@ function Infografis() {
                     </div>
 
                     {/* card-card */}
-                    <div className="min-h-screen">
+                    <div className="min-h-screen" data-aos="zoom-in" data-aos-delay="400">
                         <SDGsCardGrid />
                     </div>
                 </div>
@@ -268,11 +281,11 @@ function Infografis() {
                 <p className="text-[15px] font-bold font-raleway">Hubungi Kami</p>
                 <div className="flex items-center gap-2">
                 <IoCallOutline size={20} />
-                <p>0138414091</p>
+                <p>+62 853-3020-9635</p>
                 </div>
                 <div className="flex items-center gap-2">
                 <CiMail size={20} />
-                <p>contoh@email.com</p>
+                <p>desategalciutklakah@gmail.com</p>
                 </div>
             </div>
             </div>
@@ -280,11 +293,10 @@ function Infografis() {
 
         {/* sosmed */}
         <div className='flex justify-end px-9 py-5 gap-3'>
-            <a href="" ><FaFacebook size={30} /></a>
-            <a href="" ><FaSquareInstagram size={30} /></a>
-            <a href="" ><FaYoutube size={30} /></a>
-            <a href="" ><FaTiktok size={30} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank"><FaFacebook size={30} /></a>
+            <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" ><FaSquareInstagram size={30} /></a>
         </div>
+
         <footer className="text-black text-center border-t border-black py-4 text-sm">
             &copy; 2025 KKN Desa Tegal Ciut.
         </footer>

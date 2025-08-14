@@ -18,12 +18,27 @@ import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 
 import desa from '../images/bgdesa.jpg'; 
-import kkn from '../images/logokkn.png'; 
+import sejarah from '../images/sejarah.jpg'; 
 import logo from '../images/logo.png'; 
 import bagan from '../images/bagan.png'; 
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 // foto perangakat
 import kades from '../images/perdesa/zaeni.png';
+import kaum from '../images/perdesa/abdulhakim.png';
+import kuu from '../images/perdesa/satimin.png';
+import ksp from '../images/perdesa/nurhayati.png';
+import kspm from '../images/perdesa/rohman.png';
+
+
+
+import kasteng from '../images/perdesa/ririd.png';
+import kaspel from '../images/perdesa/amir.png';
+import kasbring from '../images/perdesa/buari.png';
+
 
 const perangkatDesa = [
   {
@@ -32,24 +47,24 @@ const perangkatDesa = [
     foto: kades,
   },
   {
-    nama: "Dita2",
-    jabatan: "Chief Operating Officer",
-    foto: kades,
+    nama: "Abdul Hakim",
+    jabatan: "Sekretaris Desa",
+    foto: kaum,
   },
   {
-    nama: "intaan3",
-    jabatan: "Chief Financial Officer",
-    foto: kades,
+    nama: "Satimin",
+    jabatan: "Kepala Urusan Umum",
+    foto: kuu,
   },
   {
-    nama: "adadeh4",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Nur Hayati",
+    jabatan: "Kepala Seksi Pelayanan",
+    foto: ksp,
   },
   {
-    nama: "test5",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Abdul Rohman",
+    jabatan: "Kepala Seksi Pemerintahan",
+    foto: kspm,
   },
   {
     nama: "test6",
@@ -67,19 +82,19 @@ const perangkatDesa = [
     foto: kades,
   },
   {
-    nama: "test9",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Ririd",
+    jabatan: "Kepala Dusun Karang Tengah",
+    foto: kasteng,
   },
   {
-    nama: "test10",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Amir",
+    jabatan: "Kepala Dusun Pelampean",
+    foto: kaspel,
   },
   {
-    nama: "test11",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Buari",
+    jabatan: "Kepala Dusun Beringinan",
+    foto: kasbring,
   },
 ];
 
@@ -137,6 +152,14 @@ function Profil() {
         window.open(googleMapsUrl, '_blank');
     };
 
+    useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: false,    
+      offset: 100,    
+    });
+  }, []);
+
 
   return (
     <div className='min-h-screen bg-white'>
@@ -184,13 +207,13 @@ function Profil() {
         {/* ini isi tengah */}
         {/* Visi Misi */}
         <div className="flex flex-col items-center justify-center px-4 py-6 md:px-8 lg:px-16 text-center">
-            <div className="mb-8 max-w-3xl">
+            <div className="mb-8 max-w-3xl" data-aos="zoom-in">
                 <h2 className="text-2xl font-bold text-gray-800 mb-2 font-raleway">VISI</h2>
                 <p className="text-gray-700 leading-relaxed text-xl font-nunito">
                 Terwujudnya masyarakat Tegalciut yang berdaya saing, religius, makmur, dan bermartabat.
                 </p>
             </div>
-            <div className='max-w-3xl'>
+            <div className='max-w-3xl' data-aos="zoom-in" data-aos-delay="400">
                 <h2 className="text-2xl font-bold text-gray-800 mb-2 font-raleway">MISI</h2>
                 <ol className="list-decimal list-inside text-gray-700 leading-relaxed text-justify space-y-2">
                     <li className='font-nunito'>Mewujudkan masyarakat desa dapat mengenyam pendidikan formal maupun informal.</li>
@@ -202,29 +225,29 @@ function Profil() {
             </div>
         </div>
         {/* bagan organisasi */}
-        <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center'>
+        <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center' data-aos="zoom-in" data-aos-delay="400">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 font-raleway">Bagan Desa Tegal Ciut</h2>
             <p className="text-m md:text-base text-slate-600 mb-6">Struktur Organisasi dan Tata Praja Desa Tegalciut Kecamatan Klakah Kabupaten Lumajang</p>
             <img src={bagan} alt="Bagan Organisasi Desa Tegal Ciut" className="w-full h-auto max-h-[600px] object-contain" />
         </div>
 
         {/* struktur organisasi */}
-        <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center'>
+        <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center' data-aos="zoom-in" data-aos-delay="400">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-9 font-raleway">Perangkat Desa Tegal Ciut</h2>
             <div className="relative w-full max-w-6xl mx-auto">
                 <Slider {...settings}>
                 {perangkatDesa.map((item, index) => (
                     <div key={index} className="px-3">
-                    <div className="flex flex-col items-center">
-                        <img
-                        src={item.foto}
-                        alt={item.nama}
-                        loading="lazy"
-                        className="w-32 h-40 object-cover rounded-lg mb-3 border border-gray-300"
-                        />
-                        <p className="font-semibold text-gray-800 text-lg">{item.nama}</p>
-                        <p className="text-sm text-gray-500">{item.jabatan}</p>
-                    </div>
+                      <div className="flex flex-col items-center">
+                          <img
+                          src={item.foto}
+                          alt={item.nama}
+                          loading="lazy"
+                          className="w-32 h-40 object-cover rounded-lg mb-3 border border-gray-300"
+                          />
+                          <p className="font-semibold text-gray-800 text-lg">{item.nama}</p>
+                          <p className="text-sm text-gray-500">{item.jabatan}</p>
+                      </div>
                     </div>
                 ))}
                 </Slider>
@@ -232,7 +255,7 @@ function Profil() {
         </div>
 
         {/* sejarah */}
-        <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center'>
+        <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center' data-aos="zoom-in" data-aos-delay="400">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4 font-raleway">Sejarah Desa Tegal Ciut</h2>
             <div className='flex flex-col md:flex-row items-center gap-5'>
                 <p className='md:w-[60%] text-justify border-l border-green-500 pl-3 font-nunito'>
@@ -242,14 +265,14 @@ function Profil() {
                     kepemimpinan desa dilanjutkan oleh Bapak Saniwar. Pada masa kepemimpinan beliau, wilayah Desa Tegal Ciut 
                     dibagi menjadi empat dusun, yaitu ; Dusun Karang Tengah, Dusun Pelampean, Dusun Jawaan, dan Dusun Bringinan
                 </p>
-                <img src={logo} alt="" className='w-full max-w-[176px] h-auto object-contain' />
+                <img src={sejarah} alt="" className='w-full max-w-[400px] h-auto object-contain rounded-xl' />
             </div>
         </div>
 
         {/* peta lokasi */}
         <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center'>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 font-raleway">Peta Lokasi Desa</h2>
-            <div className="flex flex-col md:flex-row gap-6 items-stretch">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 font-raleway" data-aos="zoom-in" data-aos-delay="400">Peta Lokasi Desa</h2>
+            <div className="flex flex-col md:flex-row gap-6 items-stretch" data-aos="zoom-in" data-aos-delay="400">
                 {/* Info Desa */}
                 <div className="w-full md:w-1/2 bg-white rounded-3xl shadow p-6 border border-blue-300 text-left">
                 <h2 className="text-lg font-bold text-gray-800 mb-4">Batas Desa :</h2>
@@ -271,7 +294,7 @@ function Profil() {
                 </div>
 
                 {/* Peta */}
-                <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg">
+                <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="400">
                 <iframe 
                     title="Lokasi Balai Desa Tegal Ciut"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2740.616850459164!2d113.23065188991207!3d-7.989070347761224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd65bda5b6ca12b%3A0x641041f44f2e50bd!2sBalai%20Desa%20Tegal%20Ciut!5e1!3m2!1sid!2sid!4v1753606044035!5m2!1sid!2sid" 
@@ -311,11 +334,11 @@ function Profil() {
                 <p className="text-[15px] font-bold font-raleway">Hubungi Kami</p>
                 <div className="flex items-center gap-2">
                 <IoCallOutline size={20} />
-                <p>0138414091</p>
+                <p>+62 853-3020-9635</p>
                 </div>
                 <div className="flex items-center gap-2">
                 <CiMail size={20} />
-                <p>contoh@email.com</p>
+                <p>desategalciutklakah@gmail.com</p>
                 </div>
             </div>
             </div>
@@ -323,11 +346,10 @@ function Profil() {
 
         {/* sosmed */}
         <div className='flex justify-end px-9 py-5 gap-3'>
-            <a href="" ><FaFacebook size={30} /></a>
-            <a href="" ><FaSquareInstagram size={30} /></a>
-            <a href="" ><FaYoutube size={30} /></a>
-            <a href="" ><FaTiktok size={30} /></a>
+          <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank"><FaFacebook size={30} /></a>
+          <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" ><FaSquareInstagram size={30} /></a>
         </div>
+
         <footer className="text-black text-center border-t border-black py-4 text-sm">
             &copy; 2025 KKN Desa Tegal Ciut.
         </footer>
