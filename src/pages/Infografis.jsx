@@ -2,16 +2,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { IoIosHome } from "react-icons/io";
-import { FaChartBar } from "react-icons/fa";
-import { FaStore } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
 import { IoPeople } from "react-icons/io5";
 import { FaPeopleRoof } from "react-icons/fa6";
 import { IoIosWoman } from "react-icons/io";
@@ -19,16 +14,15 @@ import { IoMdMan } from "react-icons/io";
 import { BsPeopleFill } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 
-import desa from '../images/bgdesa.jpg'; 
 import sdgs from '../images/sdgs.jpg'; 
 import logo from '../images/logo.png'; 
-import kue from '../images/kuekripik.jpg'; 
+import demografi from '../images/demografi.jpg'; 
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-// conponents
+// components
 import Diagrampenduduk from '../components/Diagrampenduduk';
 import SDGsCardGrid from '../components/SDGsCardGrid';
 import Diagramdusun from '../components/DiagramDusun';
@@ -63,13 +57,13 @@ function Infografis() {
             {/* burger menu */}
             <div className='md:hidden'>
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className='text-gray-800 focus:outline-none'>
-                <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                    {isMenuOpen ? (
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
-                    ) : (
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16M4 18h16'></path>
-                    )}
-                </svg>
+                    <svg className='w-8 h-8' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                        {isMenuOpen ? (
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12'></path>
+                        ) : (
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16M4 18h16'></path>
+                        )}
+                    </svg>
                 </button>
             </div>
             {/* Navigation Links (Desktop & Mobile) */}
@@ -101,19 +95,19 @@ function Infografis() {
                     onClick={() => setActiveTab('demografi')}
                     className={`flex flex-col items-center justify-center px-4 py-2 font-semibold w-28 sm:w-32 md:w-36 text-center ${activeTab === 'demografi' ? ' border border-black rounded-xl' : 'text-black '}`}
                     >
-                    <BsPeopleFill size={45} className='flex text-3xl sm:text-4xl md:text-5xl '/>
-                    <span className='text-sm sm:text-base md:text-lg'>
-                        Demografi
-                    </span>
+                        <BsPeopleFill size={45} className='flex text-3xl sm:text-4xl md:text-5xl '/>
+                        <span className='text-sm sm:text-base md:text-lg'>
+                            Demografi
+                        </span>
                     </button>
                     <button
                     onClick={() => setActiveTab('sdgs')}
                     className={`flex flex-col items-center justify-center px-4 py-2 font-semibold w-28 sm:w-32 md:w-36 text-center  ${activeTab === 'sdgs' ? 'border border-black rounded-xl' : 'text-black'}`}
                     >
-                    <FaGlobe size={45} className='flex ' />
-                    <span className='text-sm sm:text-base md:text-lg'>
-                        SDGs
-                    </span>
+                        <FaGlobe size={45} className='flex ' />
+                        <span className='text-sm sm:text-base md:text-lg'>
+                            SDGs
+                        </span>
                     </button>
                 </div>
             </div>
@@ -124,7 +118,7 @@ function Infografis() {
                     {/* atas */}
                     <div className='flex flex-col md:flex-row gap-6 items-center'>
                         <div className='w-full md:w-1/2' data-aos="zoom-in" data-aos-delay="400">
-                            <img src={kue} alt="" className="w-[500px] h-auto object-cover rounded-xl"/>
+                            <img src={demografi} alt="" className="w-[500px] h-auto object-cover rounded-xl"/>
                         </div>
                         <div className='w-full md:w-1/2 text-justify' data-aos="zoom-in" data-aos-delay="400">
                             <h2 className='text-xl md:text-2xl font-bold mb-2 text-slate-800'>DEMOGRAFI DESA TEGAL CIUT</h2>
@@ -156,7 +150,6 @@ function Infografis() {
                                     <p className="font-nunito text-lg">643 Jiwa/km²</p>
                                 </div>
                             </div>
-
                             {/* Kartu 3 */}
                             <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow" data-aos="zoom-in" data-aos-delay="400">
                                 <IoIosWoman size={56} className="text-pink-500" />
@@ -165,7 +158,6 @@ function Infografis() {
                                     <p className="font-nunito text-lg">2.309 Jiwa</p>
                                 </div>
                             </div>
-
                             {/* Kartu 4 */}
                             <div className="flex bg-slate-100 p-4 rounded-xl items-center gap-4 shadow" data-aos="zoom-in" data-aos-delay="400">
                                 <IoMdMan size={56} className="text-green-500" />

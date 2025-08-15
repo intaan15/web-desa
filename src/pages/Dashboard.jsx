@@ -1,4 +1,3 @@
-// import React from 'react'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,11 +9,8 @@ import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
 
 import desa from '../images/bgdesa.jpg'; 
-import kkn from '../images/logokkn.png'; 
 import logo from '../images/logo.png'; 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -32,7 +28,6 @@ import img3 from '../images/img3.jpg';
 import img4 from '../images/img4.jpg';
 import img5 from '../images/img5.jpg';
 import sambut from '../images/sambutan.png';
-
 
 
 function Dashboard() {
@@ -69,8 +64,7 @@ function Dashboard() {
                 </svg>
               </button>
             </div>
-            {/* Navigation Links (Desktop & Mobile) */}
-            {/* For desktop: flex, For mobile: hidden by default, visible when menu is open */}
+            {/* menu */}
             <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:space-x-6 absolute md:static top-16 right-4 bg-white md:bg-transparent p-4 md:p-0 rounded-lg shadow-lg md:shadow-none w-48 md:w-auto`}>
               <ul className='flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0'>
                 <li>
@@ -90,9 +84,8 @@ function Dashboard() {
         </header>
         {/* selamat datang atas */}
         <div className="w-full bg-white" data-aos="zoom-in">
-        {/* Container gambar 75% */}
           <div className="relative w-full h-[50vh]">
-            {/* Gambar full cover */}
+            {/* atas */}
             <img
               src={desa}
               alt="Gambar Desa"
@@ -124,18 +117,18 @@ function Dashboard() {
             <div className='flex flex-col w-full md:w-[45%] items-center text-center gap-2' data-aos="zoom-in" data-aos-delay="400">
               <IoIosHome size={48} color="#46B5B6" />
               <p className='font-bold text-[#237274]'>Profil Desa</p>
-              <p className='text-sm'>Driving innovation and digital transformation to help tech companies scale and thrive in a competitive landscape.</p>
+              <p className='text-sm'>Temukan informasi lengkap seputar progilfil Desa Tegal Ciut.</p>
             </div>
             <div className='flex flex-col w-full md:w-[45%] items-center text-center gap-2' data-aos="zoom-in" data-aos-delay="400">
               <FaChartBar size={48} color="#46B5B6" />
               <p className='font-bold text-[#237274]'>Infografis</p>
-              <p className='text-sm'>Enhancing profitability and managing financial risks with expert advisory tailored for the financial sector.</p>
+              <p className='text-sm'>Data Statistik seputar kependudukan Desa Tegal Ciut .</p>
             </div>
           </div>
           <div className='flex flex-col w-[90%] md:w-[45%] items-center text-center gap-2' data-aos="zoom-in" data-aos-delay="400">
             <FaStore size={48} className='text-center' color="#46B5B6" />
             <p className='font-bold text-[#237274]'>UMKM</p>
-            <p className='text-sm'>Enhancing profitability and managing financial risks with expert advisory tailored for the financial sector.</p>
+            <p className='text-sm'>Jelajahi UMKM di Desa Tegal Ciut.</p>
           </div>
         </div>
         

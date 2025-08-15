@@ -2,19 +2,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { IoIosHome } from "react-icons/io";
-import { FaChartBar } from "react-icons/fa";
-import { FaStore } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
 
-import desa from '../images/bgdesa.jpg'; 
-import kkn from '../images/logokkn.png'; 
 import logo from '../images/logo.png'; 
 import besi from '../images/besisano.jpg'; 
 import kue from '../images/kuekripik.jpg'; 
@@ -58,8 +51,7 @@ function Umkm() {
                 </svg>
                 </button>
             </div>
-            {/* Navigation Links (Desktop & Mobile) */}
-            {/* For desktop: flex, For mobile: hidden by default, visible when menu is open */}
+            {/* menu */}
             <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:space-x-6 absolute md:static top-16 right-4 bg-white md:bg-transparent p-4 md:p-0 rounded-lg shadow-lg md:shadow-none w-48 md:w-auto`}>
                 <ul className='flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0'>
                 <li>

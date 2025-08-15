@@ -1,23 +1,13 @@
-// import React from 'react'
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Navigation, Phone, Mail } from 'lucide-react';
-
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import { IoIosHome } from "react-icons/io";
-import { FaChartBar } from "react-icons/fa";
-import { FaStore } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
 
-import desa from '../images/bgdesa.jpg'; 
 import sejarah from '../images/sejarah.jpg'; 
 import logo from '../images/logo.png'; 
 import bagan from '../images/bagan.png'; 
@@ -32,9 +22,9 @@ import kaum from '../images/perdesa/abdulhakim.png';
 import kuu from '../images/perdesa/satimin.png';
 import ksp from '../images/perdesa/nurhayati.png';
 import kspm from '../images/perdesa/rohman.png';
-
-
-
+import kuk from '../images/perdesa/helmi.png';
+import kup from '../images/perdesa/asan.png';
+import ksk from '../images/perdesa/abdulkholik.png';
 import kasteng from '../images/perdesa/ririd.png';
 import kaspel from '../images/perdesa/amir.png';
 import kasbring from '../images/perdesa/buari.png';
@@ -67,19 +57,19 @@ const perangkatDesa = [
     foto: kspm,
   },
   {
-    nama: "test6",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Helmi Afdilatur Rohma",
+    jabatan: "Kepala Urusan Keuangan",
+    foto: kuk,
   },
   {
-    nama: "test7",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Asan",
+    jabatan: "Kepala Urusan Perencanaan",
+    foto: kup,
   },
   {
-    nama: "test8",
-    jabatan: "Senior Business Consultant",
-    foto: kades,
+    nama: "Abdul Kholik",
+    jabatan: "Kepala Seksi Kesejahteraan",
+    foto: ksk,
   },
   {
     nama: "Ririd",
@@ -102,41 +92,41 @@ function Profil() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const CustomPrevArrow = (props) => (
     <div
-      className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-teal-400"
+      className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-black"
       onClick={props.onClick}
     >
-      <FaChevronLeft size={36} />
+      <FaChevronLeft size={40} />
     </div>
   );
 
   const CustomNextArrow = (props) => (
     <div
-      className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-teal-400"
+      className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-black"
       onClick={props.onClick}
     >
-      <FaChevronRight size={36} />
+      <FaChevronRight size={40} />
     </div>
   );
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5, // default for desktop
+    slidesToShow: 6, 
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     responsive: [
         {
         breakpoint: 1280, // lg screen
-        settings: { slidesToShow: 4 },
+        settings: { slidesToShow: 5 },
         },
         {
         breakpoint: 1024, // md screen
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 4 },
         },
         {
         breakpoint: 640, // sm screen
-        settings: { slidesToShow: 2 },
+        settings: { slidesToShow: 3 },
         },
     ],
     };
@@ -145,11 +135,6 @@ function Profil() {
         lat: -7.9890703,
         lng: 113.2306519,
         address: "Jl. Gn. Ringgit, Bringinan, Tegalciut, Kec. Klakah, Kabupaten Lumajang, Jawa Timur 67356"
-    };
-
-    const handleMapClick = () => {
-        const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${balaiLocation.lat},${balaiLocation.lng}`;
-        window.open(googleMapsUrl, '_blank');
     };
 
     useEffect(() => {
@@ -184,8 +169,7 @@ function Profil() {
                 </svg>
                 </button>
             </div>
-            {/* Navigation Links (Desktop & Mobile) */}
-            {/* For desktop: flex, For mobile: hidden by default, visible when menu is open */}
+            {/* menu */}
             <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:space-x-6 absolute md:static top-16 right-4 bg-white md:bg-transparent p-4 md:p-0 rounded-lg shadow-lg md:shadow-none w-48 md:w-auto`}>
                 <ul className='flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0'>
                 <li>
@@ -231,7 +215,7 @@ function Profil() {
             <img src={bagan} alt="Bagan Organisasi Desa Tegal Ciut" className="w-full h-auto max-h-[600px] object-contain" />
         </div>
 
-        {/* struktur organisasi */}
+        {/* perangkat desa */}
         <div className='flex flex-col px-4 py-8 max-w-6xl mx-auto text-center' data-aos="zoom-in" data-aos-delay="400">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-9 font-raleway">Perangkat Desa Tegal Ciut</h2>
             <div className="relative w-full max-w-6xl mx-auto">
@@ -346,8 +330,8 @@ function Profil() {
 
         {/* sosmed */}
         <div className='flex justify-end px-9 py-5 gap-3'>
-          <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank"><FaFacebook size={30} /></a>
-          <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" ><FaSquareInstagram size={30} /></a>
+          <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank" rel="noopener noreferrer"><FaFacebook size={30} /></a>
+          <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" rel="noopener noreferrer"><FaSquareInstagram size={30} /></a>
         </div>
 
         <footer className="text-black text-center border-t border-black py-4 text-sm">
