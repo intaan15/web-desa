@@ -49,11 +49,11 @@ export default function SDGsCardGrid() {
           className="flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-2 border" data-aos="zoom-in" data-aos-delay="400"
         >
             <div className='flex flex-col items-start w-full h-full px-2'>
-                <h2 className="text-sm font-semibold mb-1 text-center ">{item.title}</h2>
+                <h2 className="text-[10px] md:text-sm font-semibold mb-1 text-center ">{item.title}</h2>
                 <div className='flex gap-9 items-center'>
-                    <img src={item.icon} alt={item.title} className="text-center w-16 h-16 mb-2" />
+                    <img src={item.icon} alt={item.title} className="text-center w-9 h-9 md:w-16 md:h-16 mb-2" />
                     <div className="w-full mt-2">
-                        <div className="text-md font-semibold text-right text-gray-600 mb-1">Nilai: {item.value}</div>
+                        <div className="text-[10px] md:text-md font-semibold text-right text-gray-600 mb-1">Nilai: {item.value}</div>
                     </div>
                 </div>
             </div>
