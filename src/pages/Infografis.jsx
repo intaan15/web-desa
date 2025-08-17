@@ -44,7 +44,7 @@ function Infografis() {
 }, []);
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-100 to-gray-200'>
+    <div className='min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 overflow-x-hidden'>
         {/* header */}
         <header className='flex items-center justify-between p-4 bg-white shadow-sm sticky top-0 z-50'>
             <div className="flex items-center space-x-3">
@@ -66,8 +66,7 @@ function Infografis() {
                     </svg>
                 </button>
             </div>
-            {/* Navigation Links (Desktop & Mobile) */}
-            {/* For desktop: flex, For mobile: hidden by default, visible when menu is open */}
+            {/* menu */}
             <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:space-x-6 absolute md:static top-16 right-4 bg-white md:bg-transparent p-4 md:p-0 rounded-lg shadow-lg md:shadow-none w-48 md:w-auto`}>
                 <ul className='flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0'>
                 <li>
