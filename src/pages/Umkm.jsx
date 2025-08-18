@@ -83,10 +83,10 @@ function Umkm() {
                     {/* Bagian Kiri - Deskripsi dan Gambar */}
                     <div data-aos="zoom-in" data-aos-delay="400">
                         <p className="text-gray-700 mb-4 text-justify">
-                            UMKM Pandai Besi Tegal Ciut, yang dimiliki oleh Bapak Sano, telah berdiri ratusan tahun 
-                            dan berfokus pada produksi senjata tajam tradisional seperti golok, clurit, dan pisau dapur. 
-                            Dengan jumlah karyawan sebanyak 2 orang, usaha ini masih dijalankan secara manual dengan mengandalkan 
-                            keterampilan turun-temurun dari generasi sebelumnya.
+                            UMKM Pandai Besi Tegal Ciut, yang dimiliki oleh Bapak Sano, telah berdiri ratusan tahun dan berfokus 
+                            pada produksi senjata tajam tradisional seperti golok, clurit, dan pisau dapur. Dengan jumlah karyawan 
+                            sebanyak 2 orang, usaha ini masih dijalankan secara manual dengan mengandalkan keterampilan turun-temurun 
+                            dari generasi sebelumnya.
                         </p>
                         <img src={besi} alt="" className="rounded shadow-md h-70"/>
                     </div>
@@ -95,32 +95,33 @@ function Umkm() {
                     <div className="text-sm text-gray-800 space-y-4" data-aos="zoom-in" data-aos-delay="400">
                     <div>
                         <h3 className="font-semibold">Hasil Produk UMKM</h3>
-                        <p>Keripik singkong, keripik pisang, keripik tempe berbagai rasa (pedas, manis, original).</p>
+                        <p>Produksi senjata tajam tradisional seperti golok, clurit, dan pisau dapur. Masih banyak lagi sesuai pesanan.</p>
                     </div>
                     <div>
                         <h3 className="font-semibold">Profil UMKM</h3>
                         <p>
-                        UMKM ini dikelola oleh Ibu Rani bersama 3 anggota keluarga. 
-                        Produksi dilakukan secara manual mulai dari pemotongan, perendaman, penggorengan hingga pengemasan.
-                        Kapasitas produksi mencapai 10–20 kg per hari.
+                        UMKM ini menggunakan besi baja bekas kendaraan dan alat berat yang diperoleh dari pengepul lokal. Proses produksi dilakukan 
+                        secara tradisional, mulai dari pemotongan hingga pengasahan dan pemasangan gagang kayu, dengan kapasitas 5–7 unit per hari.
+                        Usaha turun-temurun ini sudah memiliki nama dan dikenal luas, menjual produk secara langsung maupun melalui reseller. Target 
+                        pasarnya adalah petani dan pengguna alat tradisional di Tegal Ciut dan sekitarnya.
                         </p>
                     </div>
                     <div>
                         <h3 className="font-semibold">Jam Operasional</h3>
-                        <p>Setiap Hari, 08:00 - 18:00</p>
+                        <p>Senin - Satbtu, 07:00 - 17:00</p>
                     </div>
                     <div>
                         <h3 className="font-semibold">Hubungi Untuk Pemesanan</h3>
-                        <p>082234567890</p>
+                        <p>085956134517</p>
                     </div>
                     <div>
                         <h3 className="font-semibold">Alamat UMKM</h3>
-                        <p>Dusun Krajan RT 2 RW 1, Desa Tegal Ciut, Kec. Klakah, Lumajang</p>
+                        <p>26CP+6F8, Bringinan, Tegalciut, Kec. Klakah, Kabupaten Lumajang, Jawa Timur</p>
                     </div>
                     <div>
                         <h3 className="font-semibold">Temukan UMKM di Google</h3>
-                        <a href="https://bit.ly/KeripikMbakRani" target="_blank" className="text-blue-500 hover:underline">
-                        https://bit.ly/KeripikMbakRani
+                        <a href="https://bit.ly/PandaiBesiPakSano" target="_blank" className="text-blue-500 hover:underline">
+                        https://bit.ly/PandaiBesiPakSano
                         </a>
                     </div>
                     </div>
