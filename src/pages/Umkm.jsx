@@ -12,6 +12,7 @@ import logo from '../images/logo.png';
 import besi from '../images/besisano.jpg'; 
 import kue from '../images/kuekripik.jpg'; 
 import puli from '../images/puli.jpg'; 
+import bambu from '../images/anyamanbambu.jpg'; 
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -73,6 +74,7 @@ function Umkm() {
         {/* isi tengah */}
         <div className='flex flex-col justify-center items-center px-4 py-8'>
             <h2 className='text-2xl md:text-3xl font-bold text-slate-800 text-center font-raleway px-4 py-2 rounded' data-aos="zoom-in" >INFORMASI  UMKM DESA TEGAL CIUT</h2>
+            {/* besi pak sano */}
             <section className="my-4 px-6 md:px-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-aos="zoom-in" data-aos-delay="400">
                     Pandai Besi Pak Sano
@@ -124,6 +126,7 @@ function Umkm() {
                     </div>
                 </div>
             </section>
+            {/* kue bu supina */}
             <section className='flex flex-col w-full my-4 px-6 md:px-12 items-end'>
                 <h2 className='flex text-2xl md:text-3xl font-bold text-right mb-4' data-aos="zoom-in" data-aos-delay="400">
                     Toko Aneka Kue dan Snack Bu Supiana
@@ -177,6 +180,7 @@ function Umkm() {
                     </div>
                 </div>
             </section>
+            {/* kerupuk puli  */}
             <section className="my-4 px-6 md:px-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-4" data-aos="zoom-in" data-aos-delay="400">
                     Rumah Kerupuk Puli Lezar Bu Mistia
@@ -231,6 +235,64 @@ function Umkm() {
                         https://bit.ly/KerupukPuliLezarBuMistia
                         </a>
                     </div>
+                    </div>
+                </div>
+            </section>
+            {/* anyaman bambu */}
+            <section className='flex flex-col w-full my-4 px-6 md:px-12 items-end'>
+                <h2 className='flex text-2xl md:text-3xl font-bold text-right mb-4' data-aos="zoom-in" data-aos-delay="400">
+                    Rumah Anyaman Bambu Bu Supani 
+                </h2>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                    {/* Bagian Kiri - Detail Informasi */}
+                    <div className="text-sm text-gray-800 space-y-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div>
+                        <h3 className="font-semibold">Hasil Produk UMKM</h3>
+                        <p>Keranjang anyaman yang fungsionalitas bisa jadi keranjang sampah. Keranjang jemuran. Keranjang ikan dll.</p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold">Profil UMKM</h3>
+                        <p>
+                        Rumah Anyaman Bambu Bu Supani merupakan UMKM lokal di Desa Tegal Ciut yang mengolah 
+                        bambu menjadi keranjang anyaman serbaguna. Produk yang dihasilkan meliputi keranjang 
+                        tempat sampah, keranjang cucian, serta berbagai jenis wadah fungsional dan dekoratif. 
+                        Mengandalkan keterampilan tangan dan teknik tradisional, Bu Supani memproduksi keranjang 
+                        dengan desain sederhana namun kokoh, ramah lingkungan, dan memiliki nilai seni. Bahan 
+                        baku bambu diperoleh dari sekitar desa, sehingga sekaligus mendukung pemanfaatan sumber 
+                        daya alam lokal.Keunggulan Produk yaitu Ramah lingkungan: Menggunakan bahan alami yang 
+                        dapat terurai. Tahan lama: Anyaman kuat dan kokoh. Fungsional: Cocok untuk berbagai kebutuhan 
+                        rumah tangga. Khas lokal: Mengangkat kearifan lokal Desa Tegal Ciut.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold">Jam Operasional</h3>
+                        <p>Senin - Sabtu, 07:00 - 13:00 WIB</p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold">Hubungi Untuk Pemesanan</h3>
+                        <p>082337026161</p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold">Alamat UMKM</h3>
+                        <p>26GM+6J, Tegalciut, Kec. Klakah, Kabupaten Lumajang, Jawa Timur</p>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold">Temukan UMKM di Google</h3>
+                        <a href="https://share.google/0wZFv2qu14MeTnajc" target="_blank" className="text-blue-500 hover:underline">
+                        https://share.google/0wZFv2qu14MeTnajc
+                        </a>
+                    </div>
+                    </div>
+
+                    {/* Bagian Kanan - Deskripsi dan Gambar */}
+                    <div data-aos="zoom-in" data-aos-delay="400">
+                        <p className="text-gray-700 mb-4 text-justify">
+                            Rumah Anyaman Bambu Bu Supani merupakan UMKM lokal di Desa Tegal Ciut yang 
+                            mengolah bambu menjadi keranjang anyaman serbaguna. Produk yang dihasilkan 
+                            meliputi keranjang tempat sampah, keranjang cucian, serta berbagai jenis wadah 
+                            fungsional dan dekoratif.
+                        </p>
+                        <img src={bambu} alt="" className="rounded shadow-md h-70"/>
                     </div>
                 </div>
             </section>

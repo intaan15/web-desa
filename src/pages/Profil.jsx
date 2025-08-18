@@ -47,16 +47,6 @@ const perangkatDesa = [
     foto: kuu,
   },
   {
-    nama: "Nur Hayati",
-    jabatan: "Kepala Seksi Pelayanan",
-    foto: ksp,
-  },
-  {
-    nama: "Abdul Rohman",
-    jabatan: "Kepala Seksi Pemerintahan",
-    foto: kspm,
-  },
-  {
     nama: "Helmi Afdilatur Rohma",
     jabatan: "Kepala Urusan Keuangan",
     foto: kuk,
@@ -67,9 +57,19 @@ const perangkatDesa = [
     foto: kup,
   },
   {
+    nama: "Abdul Rohman",
+    jabatan: "Kepala Seksi Pemerintahan",
+    foto: kspm,
+  },
+  {
     nama: "Abdul Kholik",
     jabatan: "Kepala Seksi Kesejahteraan",
     foto: ksk,
+  },
+  {
+    nama: "Nur Hayati",
+    jabatan: "Kepala Seksi Pelayanan",
+    foto: ksp,
   },
   {
     nama: "Ririd",
