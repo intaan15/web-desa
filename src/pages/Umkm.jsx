@@ -108,7 +108,7 @@ function Umkm() {
                     </div>
                     <div>
                         <h3 className="font-semibold">Jam Operasional</h3>
-                        <p>Senin - Satbtu, 07:00 - 17:00</p>
+                        <p>Senin - Sabtu, 07:00 - 17:00</p>
                     </div>
                     <div>
                         <h3 className="font-semibold">Hubungi Untuk Pemesanan</h3>

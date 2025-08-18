@@ -138,13 +138,13 @@ function Dashboard() {
           <div className='w-full md:w-[50%] flex flex-col items-center text-center gap-3' data-aos="zoom-in" data-aos-delay="400">
             <p className='text-xl sm:text-2xl md:text-[25px] font-bold font-raleway'>Sambutan Kepala Desa Tegal Ciut</p>
             <p className='text-sm md:text-base font-nunito text-justify'>
-              Assalamu’alaikum warahmatullahi wabarakatuh,Selamat datang di website resmi Desa Tegal Ciut. 
+              Assalamu’alaikum warahmatullahi wabarakatuh, selamat datang di website resmi Desa Tegal Ciut. 
               Website ini hadir sebagai sarana informasi, transparansi, dan komunikasi antara pemerintah 
-              desa dengan masyarakat, sekaligus sebagai media promosi potensi desa.Tahun 2025 ini, kami 
-              berbangga mendapat dukungan dari program KKN Kolaboratif Universitas Jember (UNEJ) dan UIN 
+              desa dengan masyarakat, sekaligus sebagai media promosi potensi desa. Tahun 2025 ini, kami 
+              berbangga hati mendapat dukungan dari program KKN Kolaboratif Universitas Jember (UNEJ) dan UIN 
               Khas Jember, yang turut berperan dalam pemberdayaan masyarakat serta pengembangan program 
               kerja di desa kami. Semoga kerjasama ini membawa manfaat besar bagi kemajuan Desa Tegal Ciut 
-              dan kesejahteraan warganya.Wassalamu’alaikum warahmatullahi wabarakatuh.
+              dan kesejahteraan warganya. Wassalamu’alaikum warahmatullahi wabarakatuh.
             </p>
             <p>- Zaeni, Kepala Desa Tegal Ciut 2025 -</p>
           </div>
