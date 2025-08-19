@@ -271,8 +271,8 @@ function Infografis() {
             <div className="w-full md:w-[37%] flex flex-col items-center md:items-start space-y-2">
                 <p className="text-[15px] font-bold font-raleway">Hubungi Kami</p>
                 <div className="flex items-center gap-2">
-                <IoCallOutline size={20} />
-                <p>+62 853-3020-9635</p>
+                    <IoCallOutline size={20} />
+                    <a href="tel:+6285330209635" target="_blank">+62 853-3020-9635</a>
                 </div>
                 <div className="flex items-center gap-2">
                 <CiMail size={20} />
