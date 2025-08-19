@@ -244,10 +244,10 @@ function Profil() {
             <div className='flex flex-col md:flex-row items-center gap-5'>
                 <p className='md:w-[60%] text-justify border-l border-green-500 pl-3 font-nunito'>
                     Sebelum tahun 1990, pada masa penjajahan Belanda, wilayah yang kini dikenal sebagai Desa Tegal Ciut 
-                    awalnya bernama Desa Bengcelot. Setelah masa penjajahan, kepemimpinan desa dipegang oleh Bapak Muani. 
+                    awalnya bernama Desa Tegal Kecut. Setelah masa penjajahan, kepemimpinan desa dipegang oleh Bapak Muani. 
                     Di bawah kepemimpinannya, desa tersebut mengalami perubahan nama menjadi Desa Tegal Ciut. Selanjutnya, 
                     kepemimpinan desa dilanjutkan oleh Bapak Saniwar. Pada masa kepemimpinan beliau, wilayah Desa Tegal Ciut 
-                    dibagi menjadi empat dusun, yaitu ; Dusun Karang Tengah, Dusun Pelampean, Dusun Jawaan, dan Dusun Bringinan
+                    dibagi menjadi empat dusun, yaitu ; Dusun Karang Tengah, Dusun Pelampean, Dusun Jawaan, dan Dusun Bringinan.
                 </p>
                 <img src={sejarah} alt="" className='w-full max-w-[400px] h-auto object-contain rounded-xl' />
             </div>
