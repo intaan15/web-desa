@@ -337,7 +337,7 @@ function Umkm() {
         {/* sosmed */}
         <div className='flex justify-end px-9 py-5 gap-3'>
             <a href="https://www.facebook.com/profile.php?id=61578902762060" target="_blank"><FaFacebook size={30} /></a>
-            <a href="https://www.instagram.com/desa_tegalciut_lumajang" target="_blank" ><FaSquareInstagram size={30} /></a>
+            <a href="https://www.instagram.com/desategalciut_" target="_blank" ><FaSquareInstagram size={30} /></a>
         </div>
 
         <footer className="text-black text-center border-t border-black py-4 text-sm">
